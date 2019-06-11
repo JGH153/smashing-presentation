@@ -63,8 +63,13 @@
 			text-decoration: line-through;
 		}
 
-		.smashing-color {
-			color: #EA5139;
+		.smashing {
+			color: #EA5139 !important;
+		}
+
+		.to-right {
+			text-align: right;
+			padding-right: 120px;
 		}
 	</style>
 </head>
@@ -74,7 +79,7 @@
 		<div class="slides">
 			<section>
 				<h1>
-					<span class="smashing-color">A Smashing Presentation</span>
+					<span class="smashing">A Smashing Presentation</span>
 				</h1>
 				<h3>
 					Jan Greger Hemb
@@ -86,17 +91,287 @@
 					bit.ly/TODO
 				</h4>
 			</section>
-			<section>Slide 2</section>
+			<section data-background="media/san2.jpg">
+
+			</section>
+			<section data-background="media/all4.jpg">
+
+			</section>
+			<section data-background="media/food.jpg">
+
+			</section>
+			<section>
+				<section>
+					<h2>Intro video by Hilder'n</h2>
+					https://www.dropbox.com/s/w8rxws3bovek8va/2019-04-20%2004.00.33.mp4?dl=0
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Images from San Fran!</h1>
+				</section>
+				<section>
+					Images from <span class="smashing">Smashing</span>
+				</section>
+			</section>
+
+			<section>
+				<section data-background="media/san3.jpg">
+
+				</section>
+				<section>
+					<h1>Smashing San fran 2019</h1>
+					<h2>Frontend and Design</h2>
+				</section>
+				<section data-background="media/smash1.jpg">
+
+				</section>
+				<section data-background="media/john1.jpg">
+					<h1 class="black-stroke smashing">The talks</h1>
+					<h2 class="black-stroke">Only the good</h2>
+					<h2 class="black-stroke">All recodred</h2>
+				</section>
+
+				<section data-background="media/erik1.jpg">
+
+				</section>
+
+				<section>
+					Effortless performance debugging
+				</section>
+				<section>
+					Refactoring ui: practical interface solutions that go a long way
+				</section>
+				<section>
+					How to think like a front-end developer
+				</section>
+				<section>
+					Dynamic css
+				</section>
+				<section>
+					Making a difference with differential serving
+				</section>
+				<section>
+					Dynamic typography with fluid sizing and variable fonts: making a scalable system with modern css
+					techniques
+				</section>
+				<section>
+					Thinking with grid
+				</section>
+			</section>
+
+			<section>
+				<h1>Eating</h1>
+			</section>
+
+			<section data-background="media/food2.jpg">
+
+			</section>
+			<section data-background="media/food3.jpg">
+
+			</section>
+
+			<section>
+				<h1>Diving onto a few topics</h1>
+			</section>
+			<section>
+				<section data-background="media/balder3.jpg">
+					<h1 class="smashing">Css vars</h1>
+					<h3>CSS custom properties</h3>
+				</section>
+				<section>
+					<pre class=""><code class="CSS" data-trim contenteditable>
+						.auto-button {
+							--autoButtonMargin: 20px;
+							width: calc(50% - var(--autoButtonMargin));
+						}
+					</code></pre>
+					<ul>
+						<li class="fragment">Need to we inside rule set</li>
+						<li class="fragment">Start with --</li>
+						<li class="fragment">Saved with unit (px, rem, url...)</li>
+						<li class="fragment">Access with var(--name, fallback)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>But we have SASS varables...</h3>
+					<ul>
+						<li class="fragment">Runtime, not compile time</li>
+						<li class="fragment">Updated live</li>
+						<li class="fragment">Wide support, and is "pure" css (no IE11)</li>
+						<li class="fragment">Can get current value from JS (getPropertyValue)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Let's have some fun</h3>
+
+					<a href="https://digitalescaperoom2019.firebaseapp.com/accesscard">Accesscard</a>
+
+					<pre class="fragment"><code class="CSS" data-trim contenteditable>
+						//in JS
+						this.progressElement.nativeElement.style.cssText = '--progress-deg:' + progressDegText + ';';
+
+						//in CSS
+						background: conic-gradient(#FED546 var(--progress-deg), #111111 var(--progress-deg));
+					</code></pre>
+
+				</section>
+				<section>
+					<h2>CSS var across entire app</h2>
+					<pre class="fragment"><code class="CSS" data-trim contenteditable>
+						JS
+						const vh = window.innerHeight * 0.01;
+						document.documentElement.style.setProperty('--vh1', `${vh}px`);
+
+						CSS (for fallback)
+						:root {
+							--vh1: 1vh;
+						}
+					</code></pre>
+				</section>
+				<section data-background="media/downsides.jpg">
+					<h2 class="black-stroke smashing">Challenges</h2>
+				</section>
+				<section>
+					<h3>Challenges</h3>
+					<ul>
+						<li class="fragment">IE 11</li>
+						<li class="fragment">No true IF statements</li>
+						<li class="fragment">Can't use them in media queries</li>
+					</ul>
+				</section>
+				<section>
+					<h3>env()</h3>
+					user-agent defined variables like safe-area
+				</section>
+			</section>
+			<section data-background="media/all2.jpg">
+			</section>
+			<section>
+				<section data-background="media/balder1.jpg">
+					<h1 class="smashing to-right black-stroke">Grid</h1>
+				</section>
+				<section>
+					<h3>Grid VS Flexbox</h3>
+					<h4 class="fragment">2D VS 1D</h4>
+					<h4 class="fragment">Will use both</h4>
+					<h4 class="fragment">Grid is NOT replacing Flexbox</h4>
+				</section>
+				<section>
+					<h2>Learning it required own talk</h2>
+				</section>
+				<section>
+					<h2>Quick overview</h2>
+					<ol>
+						<li class="fragment">Dividing element into cutom 2D grid</li>
+						<li class="fragment">Then positioning sub elements on that grid</li>
+						<li class="fragment">With full control of sizes, gaps and placements</li>
+						<li class="fragment">Fully responsive</li>
+						<li class="fragment">Children can overlap</li>
+						<li class="fragment">Think of lines, not just rows and columns</li>
+					</ol>
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/grid2.JPG">
+				</section>
+				<section>
+					<img class="stretch no-img-border" data-src="media/gridLines.JPG">
+				</section>
+				<section>
+					<pre class=""><code class="CSS" data-trim contenteditable>
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+.child-Two {
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>Challenges</h3>
+					<ul>
+						<li class="fragment">IE 11</li>
+						<li class="fragment">A bit hard to initally lern</li>
+					</ul>
+				</section>
+				<section data-background="media/erik3.jpg">
+					<h2 class="black-stroke smashing">Subgrids</h2>
+					<h3 class="black-stroke"> (FF 69)</h3>
+				</section>
+			</section>
+			<section>
+				<section data-background="media/alle3.jpg">
+					<h1 class="black-stroke  smashing-color">Technical vs visual frontend</h1>
+
+				</section>
+				<section>
+					<h2>Two front-end developers are sitting at a bar. They have nothing to talk about.</h2>
+					<blockquote class="fragment">
+						So sick of being great at CSS but being forced into JavaScript. I'm not a programmer!
+					</blockquote>
+				</section>
+				<section>
+					<h2>The term front end developer is becoming too wide</h2>
+					<h3>More and more of the stack has moved to frontend</h3>
+					<h3>Frontend is gaining more responsibility from backend</h3>
+					<ul>
+						<li>Routing</li>
+						<li>State</li>
+						<li>Preformence</li>
+						<li>UX & Accessibility</li>
+						<li>Getting data from database (GraphQL and Firestore)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Imadgine a front end dev</h3>
+					<h4>Great at UX and design, css, html and making the website interactive and beatifull</h4>
+					<h4>Suddenly asked to setup a webpack build configuration...</h4>
+					<h4>Need to be a jack of all trains, but a master of none</h4>
+				</section>
+				<section>
+					<h4>Some projects use serverless, and suddenly a front end is a fullstack</h4>
+					<h4>Some front end developer don't do JS</h4>
+					<h4>Same dev that is implementing a page layout need to understand build systems</h4>
+				</section>
+				<section>
+					<h3>The great divide</h3>
+					<h4>Split into UX engineers and JS engineers?</h4>
+					<h4>Tecnical vs visual frontend?</h4>
+					<h4>Front front-end vs back front-end?</h4>
+					<h4>Front End Software Engineers vs UX engineers?</h4>
+				</section>
+
+
+				<section>
+					<h1>Done!</h1>
+				</section>
+
+				<section>
+					<h1 class="fragment"><span class="">Questions?</span></h1>
+				</section>
+				<section>
+					<!-- <h1>bit.ly/<span class="firebase-color">firestore</span>2019</h1> -->
+				</section>
+				<section>
+					This page is unintentionally left blank
+				</section>
+			</section>
 		</div>
 	</div>
-
-	<script src="js/reveal.js"></script>
+	<script src="js/reveal.js">
+	</script>
 
 	<script>
 		// More info about config & dependencies:
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			history: true,
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
