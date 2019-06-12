@@ -71,6 +71,25 @@
 			text-align: right;
 			padding-right: 120px;
 		}
+
+		.color-loop {
+			animation: color-looping 1s linear;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes color-looping {
+			0% {
+				color: #EA5139;
+			}
+
+			50% {
+				color: #fed546;
+			}
+
+			100% {
+				color: #EA5139;
+			}
+		}
 	</style>
 </head>
 
@@ -103,15 +122,7 @@
 			<section>
 				<section>
 					<h2>Intro video by Hilder'n</h2>
-					https://www.dropbox.com/s/w8rxws3bovek8va/2019-04-20%2004.00.33.mp4?dl=0
-				</section>
-			</section>
-			<section>
-				<section>
-					<h1>Images from San Fran!</h1>
-				</section>
-				<section>
-					Images from <span class="smashing">Smashing</span>
+					<a href="https://www.dropbox.com/s/w8rxws3bovek8va/2019-04-20%2004.00.33.mp4?dl=0">Intro Video</a>
 				</section>
 			</section>
 
@@ -120,7 +131,7 @@
 
 				</section>
 				<section>
-					<h1>Smashing San fran 2019</h1>
+					<h1><span class="smashing">Smashing</span> San fran 2019</h1>
 					<h2>Frontend and Design</h2>
 				</section>
 				<section data-background="media/smash1.jpg">
@@ -128,40 +139,53 @@
 				</section>
 				<section data-background="media/john1.jpg">
 					<h1 class="black-stroke smashing">The talks</h1>
-					<h2 class="black-stroke">Only the good</h2>
 					<h2 class="black-stroke">All recodred</h2>
 				</section>
 
 				<section data-background="media/erik1.jpg">
-
+					<h2 class="black-stroke">Only the good</h2>
 				</section>
 
 				<section>
-					Effortless performance debugging
+					<h2>Effortless performance debugging</h2>
+					<h3 class="fragment">Debugging in Chrome at pro level</h3>
 				</section>
 				<section>
-					Refactoring ui: practical interface solutions that go a long way
+					<h2>Refactoring ui: practical interface solutions that go a long way</h2>
+					<h3 class="fragment">Mindset when improving on design and UX</h3>
 				</section>
 				<section>
-					How to think like a front-end developer
+					<h2>How to think like a front-end developer</h2>
+					<h3 class="fragment">Front-end as a dual job</h3>
 				</section>
 				<section>
-					Dynamic css
+					<h2>Dynamic css</h2>
+					<h3 class="fragment color-loop">Dynamic css variables</h3>
 				</section>
 				<section>
-					Making a difference with differential serving
+					<h2>Making a difference with differential serving</h2>
+					<pre class="fragment"><code class="TypeScript" data-trim contenteditable>
+<!-- Browsers with ES module support -->
+<script type="module" src="main.mjs"></script>
+
+<!-- Older browsers -->
+<script nomodule src="main.es5.js"></script>
+					</code></pre>
 				</section>
 				<section>
-					Dynamic typography with fluid sizing and variable fonts: making a scalable system with modern css
-					techniques
+					<h2>Dynamic typography with fluid sizing and variable fonts: making a scalable system with modern
+						css
+						techniques</h2>
+					<h3 class="fragment smashing">And how to write short titles</h3>
 				</section>
 				<section>
-					Thinking with grid
+					<h2>Thinking with grid</h2>
+					<img class="fragment no-img-border" style="max-height: 500px" data-src="media/hat1.jpg">
 				</section>
 			</section>
 
 			<section>
-				<h1>Eating</h1>
+				<h1>The food</h1>
 			</section>
 
 			<section data-background="media/food2.jpg">
@@ -172,12 +196,12 @@
 			</section>
 
 			<section>
-				<h1>Diving onto a few topics</h1>
+				<h1>Diving onto a <span class="smashing">few</span> topics</h1>
 			</section>
 			<section>
 				<section data-background="media/balder3.jpg">
-					<h1 class="smashing">Css vars</h1>
-					<h3>CSS custom properties</h3>
+					<h1 class="smashing black-stroke">Css vars</h1>
+					<h3 class="black-stroke">CSS custom properties</h3>
 				</section>
 				<section>
 					<pre class=""><code class="CSS" data-trim contenteditable>
@@ -187,14 +211,14 @@
 						}
 					</code></pre>
 					<ul>
-						<li class="fragment">Need to we inside rule set</li>
+						<li class="fragment">Need to be inside rule set</li>
 						<li class="fragment">Start with --</li>
-						<li class="fragment">Saved with unit (px, rem, url...)</li>
 						<li class="fragment">Access with var(--name, fallback)</li>
+						<li class="fragment">Saved with unit (px, rem, url...)</li>
 					</ul>
 				</section>
 				<section>
-					<h3>But we have SASS varables...</h3>
+					<h3>But we have <span class="smashing">SASS</span> varables...</h3>
 					<ul>
 						<li class="fragment">Runtime, not compile time</li>
 						<li class="fragment">Updated live</li>
@@ -202,9 +226,10 @@
 						<li class="fragment">Can get current value from JS (getPropertyValue)</li>
 					</ul>
 				</section>
+				<section data-background="media/tom1.jpg">
+					<h3>Let's have some <span class="smashing black-stroke ">fun</span></h3>
+				</section>
 				<section>
-					<h3>Let's have some fun</h3>
-
 					<a href="https://digitalescaperoom2019.firebaseapp.com/accesscard">Accesscard</a>
 
 					<pre class="fragment"><code class="CSS" data-trim contenteditable>
@@ -214,16 +239,15 @@
 						//in CSS
 						background: conic-gradient(#FED546 var(--progress-deg), #111111 var(--progress-deg));
 					</code></pre>
-
 				</section>
 				<section>
 					<h2>CSS var across entire app</h2>
 					<pre class="fragment"><code class="CSS" data-trim contenteditable>
-						JS
+						//JS
 						const vh = window.innerHeight * 0.01;
 						document.documentElement.style.setProperty('--vh1', `${vh}px`);
 
-						CSS (for fallback)
+						//CSS (for fallback)
 						:root {
 							--vh1: 1vh;
 						}
@@ -231,18 +255,15 @@
 				</section>
 				<section data-background="media/downsides.jpg">
 					<h2 class="black-stroke smashing">Challenges</h2>
-				</section>
-				<section>
-					<h3>Challenges</h3>
 					<ul>
-						<li class="fragment">IE 11</li>
-						<li class="fragment">No true IF statements</li>
-						<li class="fragment">Can't use them in media queries</li>
+						<li class="fragment black-stroke-thin">IE 11</li>
+						<li class="fragment black-stroke-thin">No true IF statements</li>
+						<li class="fragment black-stroke-thin">Can't use them in media queries</li>
 					</ul>
 				</section>
 				<section>
 					<h3>env()</h3>
-					user-agent defined variables like safe-area
+					<span class="fragment">user-agent defined variables like safe-area</span>
 				</section>
 			</section>
 			<section data-background="media/all2.jpg">
@@ -252,10 +273,15 @@
 					<h1 class="smashing to-right black-stroke">Grid</h1>
 				</section>
 				<section>
-					<h3>Grid VS Flexbox</h3>
-					<h4 class="fragment">2D VS 1D</h4>
-					<h4 class="fragment">Will use both</h4>
-					<h4 class="fragment">Grid is NOT replacing Flexbox</h4>
+					<h2><span class="smashing">Grid</span> VS Flexbox</h2>
+					<h3 class="fragment">2D VS 1D</h3>
+					<h3 class="fragment">Will use both</h3>
+					<h3 class="fragment">Grid is <span class="smashing">NOT</span> replacing Flexbox</h3>
+				</section>
+				<section>
+						<h2>Flexbox vs <span class="smashing">Grid</span></h2>
+					<img class="stretch no-img-border"
+						data-src="https://cdn-images-1.medium.com/max/1600/1*smeiuMO3zTKD3z6Q2-HZOQ.png">
 				</section>
 				<section>
 					<h2>Learning it required own talk</h2>
@@ -292,11 +318,11 @@
 }
 					</code></pre>
 				</section>
-				<section>
-					<h3>Challenges</h3>
+				<section data-background="media/all6.jpg">
+					<h2 class="black-stroke">Challenges</h2>
 					<ul>
-						<li class="fragment">IE 11</li>
-						<li class="fragment">A bit hard to initally lern</li>
+						<li class="fragment black-stroke-thin">IE 11</li>
+						<li class="fragment black-stroke-thin">A bit hard to initally lern</li>
 					</ul>
 				</section>
 				<section data-background="media/erik3.jpg">
@@ -306,44 +332,49 @@
 			</section>
 			<section>
 				<section data-background="media/alle3.jpg">
-					<h1 class="black-stroke  smashing-color">Technical vs visual frontend</h1>
+					<h1 class="black-stroke">Technical vs visual frontend</h1>
 
 				</section>
 				<section>
-					<h2>Two front-end developers are sitting at a bar. They have nothing to talk about.</h2>
+					<h2>Two front-end developers are sitting at a bar.</h2>
+					<h2>They have <span class="smashing">nothing</span> to talk about.</h2>
 					<blockquote class="fragment">
 						So sick of being great at CSS but being forced into JavaScript. I'm not a programmer!
 					</blockquote>
 				</section>
 				<section>
 					<h2>The term front end developer is becoming too wide</h2>
-					<h3>More and more of the stack has moved to frontend</h3>
-					<h3>Frontend is gaining more responsibility from backend</h3>
+					<h3 class="fragment">More responsibility for frontend</h3>
+					<h3 class="fragment">Frontend is gaining more responsibility from backend</h3>
 					<ul>
-						<li>Routing</li>
-						<li>State</li>
-						<li>Preformence</li>
-						<li>UX & Accessibility</li>
-						<li>Getting data from database (GraphQL and Firestore)</li>
+						<li class="fragment">Routing</li>
+						<li class="fragment">State</li>
+						<li class="fragment">Preformence</li>
+						<li class="fragment">UX & Accessibility</li>
+						<li class="fragment">Getting data from database (GraphQL and Firestore)</li>
 					</ul>
 				</section>
 				<section>
-					<h3>Imadgine a front end dev</h3>
-					<h4>Great at UX and design, css, html and making the website interactive and beatifull</h4>
-					<h4>Suddenly asked to setup a webpack build configuration...</h4>
-					<h4>Need to be a jack of all trains, but a master of none</h4>
+					<h2>Imadgine a front-end developer</h2>
+					<h4 class="fragment">Great at UX and design, css, html and making the website interactive and beatifull</h4>
+					<h4 class="fragment">Suddenly asked to setup a webpack build configuration...</h4>
+					<h4 class="fragment">Need to be a jack of all trains, but a master of none</h4>
 				</section>
 				<section>
-					<h4>Some projects use serverless, and suddenly a front end is a fullstack</h4>
-					<h4>Some front end developer don't do JS</h4>
-					<h4>Same dev that is implementing a page layout need to understand build systems</h4>
+					<h3>Some projects use serverless, and suddenly a front end is a fullstack</h3>
+					<h3 class="fragment">Some front end developer don't do JS</h3>
+					<h3 class="fragment">Same dev that is implementing a page layout need to understand build systems</h3>
 				</section>
 				<section>
-					<h3>The great divide</h3>
-					<h4>Split into UX engineers and JS engineers?</h4>
-					<h4>Tecnical vs visual frontend?</h4>
-					<h4>Front front-end vs back front-end?</h4>
-					<h4>Front End Software Engineers vs UX engineers?</h4>
+					<h2>The great <span class="smashing">divide</span></h2>
+					<h3 class="fragment">Split into UX engineers and JS engineers?</h3>
+					<h3 class="fragment">Tecnical vs visual frontend?</h3>
+					<h3 class="fragment">Front front-end vs back front-end?</h3>
+					<h3 class="fragment">Front End Software Engineers vs UX engineers?</h3>
+				</section>
+
+				<section>
+					<h1>No <span class="smashing">Conclution</span></h1>
 				</section>
 
 
@@ -351,7 +382,7 @@
 					<h1>Done!</h1>
 				</section>
 
-				<section>
+				<section  data-src="media/questions.jpeg">
 					<h1 class="fragment"><span class="">Questions?</span></h1>
 				</section>
 				<section>
