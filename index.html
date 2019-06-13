@@ -89,6 +89,11 @@
 			100% {
 				color: #EA5139;
 			}
+
+		}
+
+		.contain-img {
+			background-size: contain !important;
 		}
 	</style>
 </head>
@@ -132,7 +137,7 @@
 				</section>
 				<section>
 					<h1><span class="smashing">Smashing</span> San fran 2019</h1>
-					<h2>Frontend and Design</h2>
+					<h2 class="fragment">Frontend and Design</h2>
 				</section>
 				<section data-background="media/smash1.jpg">
 
@@ -142,7 +147,7 @@
 					<h2 class="black-stroke">All recodred</h2>
 				</section>
 
-				<section data-background="media/erik1.jpg">
+				<section class="contain-img" data-background="media/erik1.jpg">
 					<h2 class="black-stroke">Only the good</h2>
 				</section>
 
@@ -279,7 +284,7 @@
 					<h3 class="fragment">Grid is <span class="smashing">NOT</span> replacing Flexbox</h3>
 				</section>
 				<section>
-						<h2>Flexbox vs <span class="smashing">Grid</span></h2>
+					<h2>Flexbox vs <span class="smashing">Grid</span></h2>
 					<img class="stretch no-img-border"
 						data-src="https://cdn-images-1.medium.com/max/1600/1*smeiuMO3zTKD3z6Q2-HZOQ.png">
 				</section>
@@ -337,15 +342,16 @@
 				</section>
 				<section>
 					<h2>Two front-end developers are sitting at a bar.</h2>
-					<h2>They have <span class="smashing">nothing</span> to talk about.</h2>
+					<h2 class="fragment">They have <span class="smashing">nothing</span> to talk about.</h2>
 					<blockquote class="fragment">
 						So sick of being great at CSS but being forced into JavaScript. I'm not a programmer!
 					</blockquote>
 				</section>
 				<section>
 					<h2>The term front end developer is becoming too wide</h2>
-					<h3 class="fragment">More responsibility for frontend</h3>
-					<h3 class="fragment">Frontend is gaining more responsibility from backend</h3>
+				</section>
+				<section>
+					<h3 class="">Frontend is gaining more responsibility from backend</h3>
 					<ul>
 						<li class="fragment">Routing</li>
 						<li class="fragment">State</li>
@@ -354,17 +360,19 @@
 						<li class="fragment">Getting data from database (GraphQL and Firestore)</li>
 					</ul>
 				</section>
+				</section>
 				<section>
-					<h2>Imadgine a front-end developer</h2>
+					<h2>Imagine a front-end developer</h2>
 					<h4 class="fragment">Great at UX and design, css, html and making the website interactive and beatifull</h4>
 					<h4 class="fragment">Suddenly asked to setup a webpack build configuration...</h4>
-					<h4 class="fragment">Need to be a jack of all trains, but a master of none</h4>
+					<h3 class="fragment">Need to be a jack of all trains, but a master of none</h3>
 				</section>
-				<section>
-					<h3>Some projects use serverless, and suddenly a front end is a fullstack</h3>
+				<!-- <section>
+					<h3>Some projects use serverless, suddenly a front end is a fullstack</h3>
 					<h3 class="fragment">Some front end developer don't do JS</h3>
-					<h3 class="fragment">Same dev that is implementing a page layout need to understand build systems</h3>
-				</section>
+					<h3 class="fragment">Same dev that is implementing a page layout</h3>
+					<h3 class="fragment">Need to understand build systems</h3>
+				</section> -->
 				<section>
 					<h2>The great <span class="smashing">divide</span></h2>
 					<h3 class="fragment">Split into UX engineers and JS engineers?</h3>
@@ -377,12 +385,14 @@
 					<h1>No <span class="smashing">Conclution</span></h1>
 				</section>
 
+				<section data-background="media/all0.jpg"></section>
 
-				<section>
-					<h1>Done!</h1>
+
+				<section data-background="media/san1.jpg">
+					<h1 class="black-stroke">Done!</h1>
 				</section>
 
-				<section  data-src="media/questions.jpeg">
+				<section data-background="media/questions.jpeg">
 					<h1 class="fragment"><span class="">Questions?</span></h1>
 				</section>
 				<section>
